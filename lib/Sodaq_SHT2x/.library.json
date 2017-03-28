@@ -1,0 +1,58 @@
+{
+    "description": "An Arduino library for the SHT21 / SHT25 humidity and temperature sensors", 
+    "repository": {
+        "url": "https://github.com/SodaqMoja/Sodaq_SHT2x", 
+        "type": "git"
+    }, 
+    "platforms": [
+        "atmelavr", 
+        "atmelsam", 
+        "espressif8266", 
+        "intel_arc32", 
+        "microchippic32", 
+        "nordicnrf51", 
+        "teensy", 
+        "timsp430"
+    ], 
+    "export": {
+        "exclude": [
+            "extras", 
+            "docs", 
+            "tests", 
+            "test", 
+            "*.doxyfile", 
+            "*.pdf"
+        ], 
+        "include": null
+    }, 
+    "authors": [
+        {
+            "maintainer": false, 
+            "name": "keestux", 
+            "url": null, 
+            "email": null
+        }, 
+        {
+            "maintainer": false, 
+            "name": "SODAQ", 
+            "url": null, 
+            "email": null
+        }, 
+        {
+            "maintainer": true, 
+            "name": "Kees Bakker", 
+            "url": null, 
+            "email": "kees@m2m4all.com"
+        }
+    ], 
+    "keywords": [
+        "sensors"
+    ], 
+    "id": 803, 
+    "name": "Sodaq_SHT2x", 
+    "frameworks": [
+        "arduino"
+    ], 
+    "version": "1.2.0", 
+    "homepage": null
+}
