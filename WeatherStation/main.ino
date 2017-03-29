@@ -1,12 +1,7 @@
-#include <Sodaq_SHT2x.h>
-#include <Wire.h>
-#include <Adafruit_BMP085.h>
-#include <WiFi101.h>
 #include <SPI.h>
-
-// You will need to create an SFE_BMP180 object, here called "pressure":
-Adafruit_BMP085 bmp;
-#define ALTITUDE 0
+#include <WiFi101.h>
+#include <Wire.h>
+#include <Sodaq_SHT2x.h>
 
 // Wifi
 char ssid[] = "dd-wrt"; //  your network SSID (name)
@@ -31,24 +26,20 @@ float wind = 0;
 
 void setup()
 {
-  delay(5000);
+  delay(2000);
   Serial.begin(9600);
   delay(2000);
-  Serial.println("REBOOT");
-//  initPressure();
-
+  Serial.println("Setup -");
   //WiFi
   initiateWifi();
-
 }
 
 void loop()
 {
-
+  Serial.println("Loop - readHumidity");
 readHumidity();
-//readPressure();
-  //readPressure();
-  postDataToSparkFun();
-
-  delay(300000);  // Pause for 5 seconds.
+Serial.println("Loop - post data");
+postDataToSparkFun();
+Serial.println("Loop - delay 20 sec");
+  delay(20000);  // Pause for 5 seconds.
 }

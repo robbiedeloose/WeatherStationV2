@@ -12,7 +12,7 @@ void initiateWifi() {
     Serial.print("Attempting to connect to SSID: ");
     Serial.println(ssid);
     status = WiFi.begin(ssid, pass);
-    delay(5000); // wait 10 seconds for connection:
+    delay(5000); // wait 5 seconds for connection:
   }
   Serial.println("Connected to wifi");
 
@@ -20,14 +20,17 @@ void initiateWifi() {
 
   Serial.println("\nStarting connection to server...");
 
-  if (client.connect(server, 1880)) { // if you get a connection, report back via serial:
-    Serial.println("connected to server");
-    // Make a HTTP request:
-    /*client.println("GET /search?q=arduino HTTP/1.1");
-    client.println("Host: www.google.com");
-    client.println("Connection: close");
-    client.println();*/
-  }
+  // if (client.connect(server, 1880)) { // if you get a connection, report back via serial:
+  //   Serial.println("connected to server");
+  //   // Make a HTTP request:
+  //   /*
+  //   client.println("GET /search?q=arduino HTTP/1.1");
+  //   client.println("Host: www.google.com");
+  //   client.println("Connection: close");
+  //   client.println();
+  //   */
+  // 
+  // }
 }
 
 void printWifiStatus() {
