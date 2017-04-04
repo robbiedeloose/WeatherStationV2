@@ -29,7 +29,7 @@ void initiateWifi() {
   //   client.println("Connection: close");
   //   client.println();
   //   */
-  // 
+  //
   // }
 }
 
